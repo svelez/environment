@@ -9,6 +9,8 @@ export ZSH="/Users/velezs/.oh-my-zsh"
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="random"
+ZSH_THEME="powerlevel9k/powerlevel9k"
+POWERLEVEL9K_MODE=nerdfont-complete
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -104,4 +106,25 @@ alias ls='ls -GF'
 
 export LESS=-FRX
 export GOPATH=/Projects/go
-export DEFAULT_USER=velezs
+
+#
+# Prompt config
+#
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(
+  status
+  root_indicator
+  background_jobs
+  # history
+  kubecontext
+  time
+  os_icon
+)
+
+POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
+DEFAULT_USER=velezs # For context
+POWERLEVEL9K_STATUS_OK=false # For Status
+POWERLEVEL9K_SHORTEN_DIR_LENGTH=3 # For dir
+POWERLEVEL9K_SHORTEN_STRATEGY=truncate_from_right # for dir
+POWERLEVEL9K_DIR_SHOW_WRITABLE=true # For dir
+POWERLEVEL9K_VCS_HIDE_TAGS=true # for vcs
+
