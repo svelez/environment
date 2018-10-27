@@ -1,0 +1,3 @@
+Set up framework for handling alternate OSes @framework
+Automate initializing homebrew on @OSX @framework
+Install iTerm2 @OSX @apps
