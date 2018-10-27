@@ -112,6 +112,7 @@ export GOPATH=/Projects/go
 #
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(
   status
+  command_execution_time
   root_indicator
   background_jobs
   # history
@@ -121,6 +122,7 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(
 )
 
 POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
+POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 DEFAULT_USER=velezs # For context
 POWERLEVEL9K_STATUS_OK=false # For Status
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=3 # For dir
