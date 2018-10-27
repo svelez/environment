@@ -1,3 +1,7 @@
 Set up framework for handling alternate OSes @framework
-Automate initializing homebrew on @OSX @framework
-Install iTerm2 @OSX @apps
+Automate initializing homebrew on @osx @framework
+Install iTerm2 @osx @apps
+Instal jq @osx @linux @utils
+Pick a linux term @linux @apps
+Find a solarized theme for linux term @linux
+Install hack nerd fong @linux @osx
