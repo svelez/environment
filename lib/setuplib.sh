@@ -27,4 +27,13 @@ function linkAppPrefs() {
     noop
 }
 
+# normalize a dotted-component version number for string comaprison
+function version() {
+    echo "$1" | awk -F. '{printf("%04d.%04d.%04d.%04d\n", $1, $2, $3, $4)}'
+}
+
+# check to see if a command is available on the path
+function has() {
+    which "$1" >& /dev/null
+}
 

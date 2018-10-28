@@ -4,7 +4,14 @@ set -eo pipefail
 ENVROOT="$(cd "$(dirname "$0")" && pwd)"
 
 source "$ENVROOT/lib/setuplib.sh"
-source "$ENVROOT/lib/osx/setuplib.sh"
+if has sw_vers && [[ $(sw_vers -productName) == "Mac OS X" ]]; then
+    source "$ENVROOT/lib/osx/setuplib.sh"
+elif [[ $(uname -o) == "GNU/Linux" ]]; then
+    # TODO
+    noop
+else
+    echo "WARNING: Unrecognized operting system" >&2 
+fi
 
 if [[ "$SHELL" != *"/zsh" ]]; then
     # TODO: Make sure zsh is available on the system
