@@ -103,9 +103,11 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias ls='ls -GF'
+alias sops='source /Projects/oqton/container-cli-ops/.bashrc'
 
 export LESS=-FRX
 export GOPATH=/Projects/go
+export PATH=$GOPATH/bin:$PATH
 
 #
 # Prompt config
@@ -123,6 +125,7 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(
 
 POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="╰─$ "
 DEFAULT_USER=velezs # For context
 POWERLEVEL9K_STATUS_OK=false # For Status
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=3 # For dir
