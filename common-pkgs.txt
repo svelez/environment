@@ -1,0 +1,18 @@
+# Collection of packages to install in a given platform's package manager
+cask:docker apt:docker.io
+git-lfs
+cask:google-chrome apt:chromium-browser
+
+htop
+hub apt:git-hub
+hubflow apt:
+
+cask:iterm2
+jq
+keepassxc cask:keepassxc
+cask:slack apt:
+
+tree
+cask:visual-studio-code apt:
+zsh
+nomgr:fooledya

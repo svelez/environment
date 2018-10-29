@@ -10,8 +10,11 @@ elif [[ $(uname -o) == "GNU/Linux" ]]; then
     # TODO
     noop
 else
-    echo "WARNING: Unrecognized operting system" >&2 
+    echo "WARNING: Unrecognized operating system" >&2
 fi
+
+initializePkgMgr
+installSoftware
 
 if [[ "$SHELL" != *"/zsh" ]]; then
     # TODO: Make sure zsh is available on the system
