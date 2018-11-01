@@ -22,7 +22,7 @@ function osxBrewPkgInstaller() {
 
     echo "Checking for need to instal $pkgid" >&2
     if ! "${cmd[@]}" ls --versions $pkgid &> /dev/null ; then
-        echo "${cmd[@]}" install $pkgid
+        "${cmd[@]}" install $pkgid
     fi
 }
 
