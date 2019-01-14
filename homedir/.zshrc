@@ -104,6 +104,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias ls='ls -GF'
 alias sops='source /Projects/oqton/container-cli-ops/.bashrc'
+alias oqctl=`go env GOPATH`/src/github.com/oqton/oqctl/bin/`go env GOOS`/oqctl
 
 export LESS=-FRX
 export GOPATH=/Projects/go
@@ -132,4 +133,3 @@ POWERLEVEL9K_SHORTEN_DIR_LENGTH=3 # For dir
 POWERLEVEL9K_SHORTEN_STRATEGY=truncate_from_right # for dir
 POWERLEVEL9K_DIR_SHOW_WRITABLE=true # For dir
 POWERLEVEL9K_VCS_HIDE_TAGS=true # for vcs
-
