@@ -102,13 +102,14 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+export LESS=-FRX
+export GOPATH=/Projects/go
+export PATH=$GOPATH/bin:$PATH
+
 alias ls='ls -GF'
 alias sops='source /Projects/oqton/container-cli-ops/.bashrc'
 alias oqctl=`go env GOPATH`/src/github.com/oqton/oqctl/bin/`go env GOOS`/oqctl
 
-export LESS=-FRX
-export GOPATH=/Projects/go
-export PATH=$GOPATH/bin:$PATH
 
 #
 # Prompt config
@@ -133,3 +134,9 @@ POWERLEVEL9K_SHORTEN_DIR_LENGTH=3 # For dir
 POWERLEVEL9K_SHORTEN_STRATEGY=truncate_from_right # for dir
 POWERLEVEL9K_DIR_SHOW_WRITABLE=true # For dir
 POWERLEVEL9K_VCS_HIDE_TAGS=true # for vcs
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/velezs/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/velezs/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/velezs/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/velezs/google-cloud-sdk/completion.zsh.inc'; fi
