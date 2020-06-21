@@ -13,6 +13,7 @@ cask:iterm2
 cask:breaktimer snap:breaktimer
 
 jq
+kubectl brew:kubernetes-cli
 keepassxc cask:keepassxc
 cask:slack apt:
 
