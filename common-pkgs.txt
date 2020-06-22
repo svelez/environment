@@ -4,20 +4,32 @@ git-lfs
 cask:google-chrome apt:chromium-browser
 
 htop
-hub apt:git-hub
+hub
 hubflow apt:
-# Just a reminder to figure out nerdfonts
+# Just a reminder to figure out nerdfonts on linux
 # apt:fonts-powerline
+cask:font-hack-nerd-font
 
 cask:iterm2
 cask:breaktimer snap:breaktimer
 
 jq
+brew:watch
 kubectl brew:kubernetes-cli
+helm snap:helm
 keepassxc cask:keepassxc
-cask:slack apt:
+cask:slack snap:slack
+npm
+yarn apt:yarnpkg
 
+clang-format apt:clang-format-9
+go apt:golang-go
 tree
 cask:visual-studio-code apt:
 zsh
-nomgr:fooledya
+
+cask:zoomus apt:https://zoom.us/client/latest/zoom_amd64.deb
+# needs additional source for apt
+code brew:visual-studio-code
+
+# Install "n" with npm? What else?
