@@ -1,35 +1,57 @@
 # Collection of packages to install in a given platform's package manager
-cask:docker apt:docker-ce
-git-lfs
-cask:google-chrome apt:chromium-browser
 
-htop
-hub
-hubflow apt:
+#
+# Fonts
+#
+
 # Just a reminder to figure out nerdfonts on linux
 # apt:fonts-powerline
 cask:font-hack-nerd-font
 
-cask:iterm2
-cask:breaktimer snap:breaktimer
+#
+# Basic Command line tools
+#
 
+git-lfs
+htop
+hub
+hubflow apt:
 jq
+tree
 brew:watch
-kubectl brew:kubernetes-cli
+zsh
+
+#
+# Containers and orchestration
+#
+
+# needs additional source for apt
+cask:docker apt:docker-ce
 helm snap:helm
-keepassxc cask:keepassxc
-cask:slack snap:slack
+kubectl brew:kubernetes-cli
+
+#
+# Development
+#
+
+# needs additional source for apt
+code cask:visual-studio-code
+clang-format apt:clang-format-9
+go apt:golang-go
 npm
 yarn apt:yarnpkg
 
-clang-format apt:clang-format-9
-go apt:golang-go
-tree
-cask:visual-studio-code apt:
-zsh
+#
+# Productivity and Collaboration
+#
 
+cask:breaktimer snap:breaktimer
+cask:google-chrome apt:chromium-browser
+cask:iterm2
+keepassxc cask:keepassxc
+cask:slack snap:slack
+vlc
 cask:zoomus apt:https://zoom.us/client/latest/zoom_amd64.deb
-# needs additional source for apt
-code brew:visual-studio-code
+
 
 # Install "n" with npm? What else?
