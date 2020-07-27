@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/velezs/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -67,6 +67,7 @@ COMPLETION_WAITING_DOTS="true"
 plugins=(
   git
   wd
+  ssh-agent
 
   zsh-autosuggestions
   zsh-syntax-highlighting
@@ -103,14 +104,22 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 export LESS=-FRX
-#export GOPATH=/Projects/go
+P=~/projects
+if [[ -d /Projects ]]; then 
+  P=/Projects
+fi
+export P
+if [[ -e $P/n-pfx ]]; then
+  export N_PREFIX=$P/n-pfx
+  export PATH=${N_PREFIX}/bin:$PATH
+fi
 export PATH=$(go env GOPATH)/bin:$PATH
-export OQTON_DEPLOY_RELEASES_DIR=/Projects/oqton/releases
+export OQTON_DEPLOY_RELEASES_DIR=$P/oqton/releases
 
 alias ls='ls -GF'
-alias sops='source /Projects/oqton/container-cli-ops/.bashrc'
-alias oqctl=/Projects/oqton/oqctl/cmd/oqctl/bin/`go env GOOS`/oqctl
-alias oqctly=/Projects/oqton/oqctl/cmd/oqctl/bin/`go env GOOS`/oqctl -o yaml
+alias sops="source $P/oqton/container-cli-ops/.bashrc"
+alias oqctl=$P/oqton/oqctl/cmd/oqctl/bin/`go env GOOS`/oqctl
+alias oqctly=$P/oqton/oqctl/cmd/oqctl/bin/`go env GOOS`/oqctl -o yaml
 
 
 #
@@ -141,4 +150,4 @@ autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/vault vault
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/velezs/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/velezs/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f "$HOME/google-cloud-sdk/path.zsh.inc" ]; then . "$HOME/google-cloud-sdk/path.zsh.inc"; fi

@@ -8,7 +8,7 @@ function linkto() {
     # cd to the target in a subshell
     (
         cd "$dest"
-        find "$srcs" -depth 1 | while read e; do
+        find "$srcs" -maxdepth 1 | while read e; do
             if [[ -e $(basename "$e") ]]; then
                 rm -rf "$(basename "$e")"
             fi

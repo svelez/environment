@@ -16,7 +16,7 @@ fi
 initializePkgMgr
 installSoftware
 
-if [[ "$SHELL" != *"/zsh" ]]; then
+if [[ "$SHELL" != *"zsh" ]]; then
     # TODO: Make sure zsh is available on the system
     chsh zsh
 fi
