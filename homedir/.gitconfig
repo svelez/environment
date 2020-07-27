@@ -1,0 +1,27 @@
+[user]
+	name = Steven Velez
+	email = steven.velez@oqton.com
+[alias]
+	lol = log --oneline --graph --decorate
+	lob = log --oneline --graph --decorate --first-parent
+	co = checkout
+	st = status
+[credential]
+#	helper = osxkeychain
+[pull]
+	rebase = true
+[merge]
+	conflictStyle = diff3
+[core]
+	editor = code --wait
+[fetch]
+	prune = true
+[rerere]
+	enabled = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+# [url "git@github.com:oqton/"]
+#	insteadof = https://github.com/oqton/
