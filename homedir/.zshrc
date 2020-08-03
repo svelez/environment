@@ -104,7 +104,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 export LESS=-FRX
-P=~/projects
+P=~/Projects
 if [[ -d /Projects ]]; then 
   P=/Projects
 fi
@@ -113,7 +113,7 @@ if [[ -e $P/n-pfx ]]; then
   export N_PREFIX=$P/n-pfx
   export PATH=${N_PREFIX}/bin:$PATH
 fi
-export PATH=$(go env GOPATH)/bin:$PATH
+export PATH=$(go env GOPATH)/bin:/snap/bin:$PATH
 export OQTON_DEPLOY_RELEASES_DIR=$P/oqton/releases
 
 alias ls='ls -GF'
