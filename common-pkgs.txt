@@ -20,15 +20,18 @@ jq
 tree
 brew:watch
 zsh
+apt:snapd
 
 #
 # Containers and orchestration
 #
 
-# needs additional source for apt
+#
+# needs additional source for apt: https://download.docker.com/linux/ubuntu <codename> stable
+# 
 cask:docker apt:docker-ce
 helm snap:helm
-kubectl brew:kubernetes-cli
+snap:kubectl brew:kubernetes-cli
 
 #
 # Development
@@ -51,7 +54,7 @@ cask:iterm2
 keepassxc cask:keepassxc
 cask:slack snap:slack
 vlc
-cask:zoomus apt:https://zoom.us/client/latest/zoom_amd64.deb
+cask:zoomus apt:https://zoom.us/client/latest/zoom_amd64.deb flatpak:us.zoom.Zoom
 
 
 # Install "n" with npm? What else?
