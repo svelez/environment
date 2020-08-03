@@ -18,7 +18,7 @@ installSoftware
 
 if [[ "$SHELL" != *"zsh" ]]; then
     # TODO: Make sure zsh is available on the system
-    chsh zsh
+    chsh -s $(which zsh)
 fi
 
 if [[ ! -d ~/.oh-my-zsh ]]; then
