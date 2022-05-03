@@ -13,6 +13,7 @@
 	rebase = true
 [merge]
 	conflictStyle = diff3
+	guitool = kdiff3
 [core]
 	editor = code --wait
 [fetch]
@@ -24,7 +25,11 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
-# [url "git@github.com:oqton/"]
+#[url "git@github.com:oqton/"]
 #	insteadof = https://github.com/oqton/
+#[url "https://github.com/oqton/"]
+#	insteadof = git@github.com:oqton/
 [github]
 	user = svelez
+[init]
+	defaultBranch = main

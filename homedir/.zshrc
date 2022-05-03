@@ -65,6 +65,9 @@ COMPLETION_WAITING_DOTS="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+  asdf
+  docker
+  docker-compose
   git
   git-hubflow
   github
@@ -109,9 +112,6 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 export LESS=-FRX
 P=~/Projects
-if [[ -d /Projects ]]; then 
-  P=/Projects
-fi
 export P
 if [[ -e $P/n-pfx ]]; then
   export N_PREFIX=$P/n-pfx
